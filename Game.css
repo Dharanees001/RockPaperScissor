@@ -1,0 +1,169 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(./back.webp);  /* Dark background with image */
+  color: #fff;  /* White text for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%; /* Ensure the body takes full height */
+  background-size: cover; /* Ensure background covers the entire screen */
+  background-position: center; /* Center the gradient */
+  position: relative; /* To keep it fixed */
+}
+
+/* Adjusted game container */
+.game-container {
+  background-color: rgba(255, 255, 255, 0.8);  /* Semi-transparent white background */
+  backdrop-filter: blur(10px);  /* Add blur effect */
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  height: 80vh;
+  border: 1px solid rgba(255, 255, 255, 0.2);  /* Light border for separation */
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem;
+  color: #3f4a72;  /* Dark violet-blue for the heading */
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.buttons button {
+  background-color: #223198;  /* Light purple button color */
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  min-width: 120px;
+  max-width: 160px;
+}
+
+.buttons button:hover {
+  background-color: #5a3ebf;  /* Darker purple on hover */
+  transform: translateY(-2px);
+}
+
+/* Mute and Reset Button Styles */
+.mute-btn,
+.reset-btn {
+  margin-top: 1rem;
+  background-color: #010032;  /* Purple for mute/reset buttons */
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.mute-btn:hover,
+.reset-btn:hover {
+  background-color: #6a3f8c;
+  transform: scale(1.05);
+}
+
+/* Result Box Styles */
+.result {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+}
+
+.result.win {
+  background-color: #4caf50; /* Green background for win */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+.result.lose {
+  background-color: #f44336; /* Red background for lose */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(244, 67, 54, 0.2);
+}
+
+.result.draw {
+  background-color: #9e9e9e; /* Neutral gray background for draw */
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(158, 158, 158, 0.2);
+}
+
+.result h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.result p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Score Styles */
+.score {
+  background-color: #ffffff;  /* White background for the score section */
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #333;
+  font-weight: 500;
+  box-shadow: inset 0 0 8px rgba(90, 75, 129, 0.05);
+  margin-top: 1rem;
+}
+
+.score p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 600px) {
+  /* Mobile Friendly */
+  .game-container {
+    padding: 1rem;
+    height: 90vh;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .buttons button {
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+
+  .score p {
+    font-size: 1rem;
+  }
+}
